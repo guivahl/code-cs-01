@@ -14,3 +14,8 @@ Implemente um programa que:
 2) leia um percurso fornecido pelo usuário e armazene em um array unidimensional.
 
 Após isso, calcule e mostre a distância percorrida pelo usuário. Por exemplo, para o percurso 1, 2, 3, 2, 5, 1, 4 teremos 15 + 10 + 10+ 28 + 12 + 5 = 80 km.
+
+## Pressuposições
+
+1. Distância entre as cidades serão sempre inteiros maiores que 0.
+2. Matrizes provindas de arquivo sempre serão quadradas.
