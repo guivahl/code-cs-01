@@ -32,6 +32,21 @@ namespace ex01
             }
         }
 
+        public void Preencher(Mapa mapa, int[] cidades) {
+            foreach (var cidade in cidades) {
+                int proximaCidade = cidade - 1;
+
+                if (this.Tamanho() > 0) {
+                    int cidadeOrigem = this.UltimaCidade();
+                    int distancia = mapa.ConsultaDistancia(cidadeOrigem, proximaCidade);
+                    
+                    this.AdicionaDistancia(distancia);
+                }
+
+                this.AdicionaCidade(proximaCidade);
+            }
+        }
+
         public override string ToString() => $"Trajeto {this.Trajeto} = {this.Distancia} km";
     }
 }

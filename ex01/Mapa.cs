@@ -84,6 +84,17 @@ namespace ex01
             }
         }
 
+        public void Preencher(int[] valores) {
+            for(int linha = 0; linha < this.qtdCidades; linha++) {
+                for(int coluna = 0; coluna < this.qtdCidades; coluna++) {
+                    int indice = linha * qtdCidades + coluna;
+                    int distancia = valores[indice];
+
+                    this.TentaAdicionarDistancia(linha, coluna, distancia);
+                }
+            }
+        }
+
         public override string ToString() {
             string resultado = "";
             string cabecalho = $"i\\j ", corpoTabela = "";
