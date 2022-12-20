@@ -70,6 +70,8 @@ namespace ex01
         
             for(int linha = 0; linha < this.qtdCidades; linha++) {
                 for(int coluna = 0; coluna < this.qtdCidades; coluna++) {
+                    if (linha == coluna) continue;
+
                     int distancia = devePreencherAutom switch
                     {
                         Mapa.OPCAO_AUTOMATICA => GeraDistanciaAleatoria(),
