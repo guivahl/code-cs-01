@@ -4,7 +4,7 @@ Enunciado
 
 A distância entre várias cidades pode ser expressada por uma tabela, conforme a imagem abaixo.
 
-![imagem](https://s3-sa-east-1.amazonaws.com/lcpi/bc5db0a-bd2d-4689-9fbd-926f47ebeb64.png)
+![imagem](https://s3-sa-east-1.amazonaws.com/lcpi/5bc5db0a-bd2d-4689-9fbd-926f47ebeb64.png)
 
 
 Implemente um programa que:
