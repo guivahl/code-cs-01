@@ -31,7 +31,7 @@ class Program
             percurso.AdicionaCidade(proximaCidade);
 
             System.Console.WriteLine($"Percurso atualizado: {percurso.Trajeto}");            
-            System.Console.Write("Qual próxima cidade (para Parar, digite -1)? ");
+            System.Console.Write("Qual próxima cidade? (para Parar, digite um valor inválido.) ");
            
             proximaCidade = System.Console.ReadLine().ToInt();
         }
