@@ -4,24 +4,27 @@ class Program
 {
     static void Main(string[] args)
     {
-        System.Console.Write("Quantas cidades deseja adicionar no mapa? ");
+        DesktopTxt matriz = new DesktopTxt("matriz.txt");
+        
+        if (!matriz.ExisteArquivo()) return;
+        
+        DesktopTxt caminho = new DesktopTxt("caminho.txt");
+        
+        if (!caminho.ExisteArquivo()) return;
+        
+        int[] valoresMapa = matriz.ObterValores().ToInt();
 
-        int qtdCidades = System.Console.ReadLine().ToInt();
-
-        Mapa mapa = new Mapa(qtdCidades);
-
-        mapa.Preencher();
+        Mapa mapa = new Mapa(matriz.QuantidadeLinhas());
+        mapa.Preencher(valoresMapa);
 
         System.Console.Write(mapa.ToString());
 
+        int[] valoresCaminho = caminho.ObterValores().ToInt();
         Percurso percurso = new Percurso();
 
-        percurso.Preencher(mapa);
+        percurso.Preencher(mapa, valoresCaminho);
 
         System.Console.Write(mapa.ToString());
-        System.Console.WriteLine($"Trajeto (cidades): {percurso.Trajeto}");
-        System.Console.WriteLine($"Percurso (em km): {percurso.Distancia}");
-        
         System.Console.WriteLine(percurso.ToString());
     }
 }
