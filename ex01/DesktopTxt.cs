@@ -21,7 +21,7 @@ namespace ex01
         public string[] ObterValores() =>
             this.LerTexto()
                     .Replace(Environment.NewLine, ",")
-                    .Split(",")
+                    .Split(",", StringSplitOptions.RemoveEmptyEntries)
                     .Where(valor => Int32.TryParse(valor, out int x))
                     .ToArray();
     }
