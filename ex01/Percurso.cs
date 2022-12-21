@@ -4,7 +4,7 @@ namespace ex01
     {
         private List<int> trajeto = new List<int>();
         public int Distancia { get; private set; }
-        public string Trajeto { get { return String.Join(",", this.trajeto); } }
+        public string Trajeto { get { return String.Join(",", this.trajeto.Select(d => d + 1)); } }
         private void AdicionaCidade(int cidade) => trajeto.Add(cidade); 
         private void AdicionaDistancia(int distancia) => this.Distancia += distancia;
         private int Tamanho () => this.trajeto.Count;
