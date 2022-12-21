@@ -13,7 +13,7 @@ namespace ex01
         public void Preencher(Mapa mapa) {
             System.Console.Write("Qual cidade você está? ");
             
-            int proximaCidade = System.Console.ReadLine().ToInt();
+            int proximaCidade = System.Console.ReadLine().ToInt() - 1;
 
             while (mapa.EhCidadeValida(proximaCidade))  {
                 if (this.Tamanho() > 0) {
@@ -28,7 +28,7 @@ namespace ex01
                 System.Console.WriteLine($"Percurso atualizado: {this.Trajeto}");            
                 System.Console.Write("Qual próxima cidade? (para Parar, digite um valor inválido.) ");
             
-                proximaCidade = System.Console.ReadLine().ToInt();
+                proximaCidade = System.Console.ReadLine().ToInt() - 1;
             }
         }
 
