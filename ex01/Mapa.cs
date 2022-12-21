@@ -51,7 +51,7 @@ namespace ex01
         }
 
         private int LeDistancia(int origem, int destino) {
-            System.Console.Write($"Qual distância entre {origem} e {destino} (em km)? ");
+            System.Console.Write($"Qual distância entre {origem + 1} e {destino + 1} (em km)? ");
             
             int distancia = System.Console.ReadLine().ToInt();
 
