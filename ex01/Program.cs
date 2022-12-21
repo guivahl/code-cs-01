@@ -17,8 +17,6 @@ class Program
         Mapa mapa = new Mapa(matriz.QuantidadeLinhas());
         mapa.Preencher(valoresMapa);
 
-        System.Console.Write(mapa.ToString());
-
         int[] valoresCaminho = caminho.ObterValores().ToInt();
         Percurso percurso = new Percurso();
 
