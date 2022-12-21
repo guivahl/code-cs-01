@@ -89,13 +89,13 @@ namespace ex01
             string cabecalho = $"i\\j ", corpoTabela = "";
 
             for(int indiceCabeçalho = 0; indiceCabeçalho < this.qtdCidades; indiceCabeçalho++) {
-                cabecalho = string.Concat(cabecalho, indiceCabeçalho, " ");
+                cabecalho = string.Concat(cabecalho, indiceCabeçalho + 1, " ");
             }
             cabecalho = string.Concat(cabecalho, Environment.NewLine);
 
 
             for(int linha = 0; linha < this.qtdCidades; linha++) {
-                corpoTabela = string.Concat(corpoTabela, linha, "   ");
+                corpoTabela = string.Concat(corpoTabela, linha + 1, "   ");
                 
                 for(int coluna = 0; coluna < this.qtdCidades; coluna++) {
                     int valorTabela = this.distancias[linha, coluna];
